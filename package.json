@@ -1,6 +1,6 @@
 {
   "name": "create-mc-bedrock",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI tool to create Minecraft  projects by cloning samples from the Minecraft Scripting Samples repository.",
   "main": "index.js",
   "bin": {

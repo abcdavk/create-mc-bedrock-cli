@@ -25,7 +25,9 @@ npx create-mc-bedrock
 3. The tool will clone the selected sample into the specified folder and clean up temporary files.
 
 ## Showcase
-![Showcase](screenshots/showcase.gif)
+![showcase](screenshots/img1.png)
+![showcase](screenshots/img2.png)
+![showcase](screenshots/gif.gif)
 
 ## Requirements
 - Node.js
