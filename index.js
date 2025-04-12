@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import inquirer from 'inquirer';
 import simpleGit from 'simple-git';
 import path from 'path';

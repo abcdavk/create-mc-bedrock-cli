@@ -24,8 +24,8 @@ npx create-mc-bedrock
    - Specify the destination folder where the project should be created.
 3. The tool will clone the selected sample into the specified folder and clean up temporary files.
 
-## Screenshots
-
+## Showcase
+![Showcase](screenshots/showcase.gif)
 
 ## Requirements
 - Node.js
