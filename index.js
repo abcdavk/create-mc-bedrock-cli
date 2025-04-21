@@ -77,12 +77,24 @@ class BedrockCLI {
 
   async moveSample(samplePath, targetPath) {
     try {
-      await mkdir(path.dirname(targetPath), { recursive: true });
-      await fs.rename(samplePath, targetPath);
-    console.log('Sample generated successfully!');
-    console.log(`🎉 Your project is ready! To get started:
+      await mkdir(targetPath, { recursive: true });
+      const entries = await fs.readdir(samplePath, { withFileTypes: true });
+
+      for (const entry of entries) {
+        const sourcePath = path.join(samplePath, entry.name);
+        const destinationPath = path.join(targetPath, entry.name);
+
+        if (entry.isDirectory()) {
+          await this.moveSample(sourcePath, destinationPath);
+        } else {
+          await fs.copyFile(sourcePath, destinationPath);
+        }
+      }
+
+      console.log('Sample workspace generated successfully!');
+      console.log(`🎉 Your project is ready! To get started:
     1. Navigate to your project folder:
-       cd ${path.dirname(targetPath)}
+       cd ${targetPath}
     2. Open the project in your code editor:
        code .
     3. Start building your Minecraft Bedrock project! 🚀`);
