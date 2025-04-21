@@ -4,6 +4,7 @@ import inquirer from 'inquirer';
 import simpleGit from 'simple-git';
 import path from 'path';
 import fs, { mkdir } from 'fs/promises'; 
+import { v4 as uuidv4 } from 'uuid';
 
 class BedrockCLI {
   constructor() {
@@ -103,6 +104,41 @@ class BedrockCLI {
     }
   }
 
+  async updateManifestFiles(destination, userInputName) {
+    const manifestPaths = [
+      path.join(destination, 'behavior_packs', 'starter', 'manifest.json'),
+      path.join(destination, 'resource_packs', 'starter', 'manifest.json')
+    ];
+
+    for (const manifestPath of manifestPaths) {
+      try {
+        const manifestExists = await fs.access(manifestPath).then(() => true).catch(() => false);
+        if (!manifestExists) continue;
+
+        const manifestContent = JSON.parse(await fs.readFile(manifestPath, 'utf-8'));
+
+        // Update UUIDs
+        manifestContent.header.uuid = uuidv4();
+        if (manifestContent.modules) {
+          manifestContent.modules.forEach(module => {
+            module.uuid = uuidv4();
+            module.description = `Generated from npx create-mc-bedrock`;
+          });
+        }
+
+        // Update name and description based on user input and type (RP/BP)
+        const type = manifestPath.includes('behavior_packs') ? 'BP' : 'RP';
+        manifestContent.header.name = `${userInputName} ${type}`;
+        manifestContent.header.description = `Generated from npx create-mc-bedrock`;
+
+        // Write updated manifest back to file
+        await fs.writeFile(manifestPath, JSON.stringify(manifestContent, null, 2), 'utf-8');
+      } catch (error) {
+        console.error(`Error updating manifest at ${manifestPath}:`, error.message);
+      }
+    }
+  }
+
   async cleanupTempFiles() {
     try {
       await fs.rm(this.tempRepoPath, { recursive: true, force: true });
@@ -127,10 +163,14 @@ class BedrockCLI {
       const answers = await this.promptUser(samples);
       const { sample, destination } = answers;
 
-      const targetPath = path.resolve(destination, sample);
+      const targetPath = path.resolve(destination);
       const samplePath = path.join(this.tempRepoPath, sample);
 
       await this.moveSample(samplePath, targetPath);
+
+      // Update manifest files after moving the sample
+      const relativePath = path.relative(process.cwd(), targetPath);
+      await this.updateManifestFiles(relativePath, destination);
     } catch (error) {
       console.error(error.message);
     } finally {

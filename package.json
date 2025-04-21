@@ -1,13 +1,13 @@
 {
   "name": "create-mc-bedrock",
-  "version": "1.0.5",
-  "description": "CLI tool to create Minecraft  projects by cloning samples from the Minecraft Scripting Samples repository.",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "CLI tool to create Minecraft projects by cloning samples from the Minecraft Scripting Samples repository.",
+  "main": "src/cli/index.js",
   "bin": {
-    "create-mc-bedrock": "index.js"
+    "create-mc-bedrock": "src/cli/index.js"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/cli/index.js"
   },
   "keywords": [
     "minecraft",
@@ -19,7 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "inquirer": "^9.3.7",
-    "simple-git": "^3.27.0"
+    "simple-git": "^3.27.0",
+    "uuid": "^9.0.0"
   },
   "type": "module"
 }
