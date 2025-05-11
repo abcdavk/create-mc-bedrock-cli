@@ -2,6 +2,8 @@
 
 `create-mc-bedrock` is a simple and interactive CLI tool to help you quickly set up Minecraft Bedrock workspaces by cloning samples from the [Microsoft Minecraft Scripting Samples](https://github.com/microsoft/minecraft-scripting-samples) repository.
 
+[![CodeFactor](https://www.codefactor.io/repository/github/keyyard/create-mc-bedrock-cli/badge)](https://www.codefactor.io/repository/github/keyyard/create-mc-bedrock-cli)
+
 ## Features
 - Interactive prompts to select a sample project.
 - Automatically clones the selected sample to your workspace.
@@ -23,7 +25,6 @@ npx create-mc-bedrock
 2. Follow the interactive prompts:
    - Select a sample project from the list.
    - Specify the destination folder where the project should be created.
-3. The tool will clone the selected sample into the specified folder and clean up temporary files.
 
 ## Showcase
 ![showcase](https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/screenshots/img2.png)
