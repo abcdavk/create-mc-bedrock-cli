@@ -10,6 +10,9 @@
 - Easy to use with `npx create-mc-bedrock`.
 - Fresh manifest uuids generated along.
 
+## Requirements
+- Node.js
+
 ## Installation
 You don't need to install this tool globally. You can use it directly with `npx`:
 
@@ -30,9 +33,6 @@ npx create-mc-bedrock
 ![showcase](https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/screenshots/img2.png)
 ![showcase](https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/screenshots/img1.png)
 ![showcase](https://github.com/Keyyard/create-mc-bedrock-cli/blob/main/screenshots/gif.gif)
-
-## Requirements
-- Node.js
 
 ## Contributing
 Contributions are welcome! Feel free to open an issue or submit a pull request.
