@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { displayAsciiArt } from '../utils/logger.js';
 import { fetchSamples, getSamples } from '../services/gitService.js';
 import { promptUser } from './commands.js';
