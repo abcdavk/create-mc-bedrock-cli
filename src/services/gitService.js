@@ -17,9 +17,21 @@ export async function fetchSamples() {
 export async function getSamples() {
   try {
     const entries = await fs.readdir(tempRepoPath, { withFileTypes: true });
-    return entries
+    const samples = entries
       .filter(entry => entry.isDirectory() && !entry.name.startsWith('.'))
-      .map(entry => ({ name: entry.name, value: entry.name }));
+      .map(entry => ({
+        name: entry.name === 'ts-starter' ? '⭐ ts-starter' : entry.name,
+        value: entry.name
+      }));
+
+    // Move the starred template to the top
+    samples.sort((a, b) => {
+      if (a.value === 'ts-starter') return -1;
+      if (b.value === 'ts-starter') return 1;
+      return 0;
+    });
+
+    return samples;
   } catch (error) {
     console.error('Error reading samples:', error.message);
     return [];

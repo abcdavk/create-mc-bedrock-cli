@@ -13,3 +13,11 @@
 ---
 
 For earlier changes, refer to the project history.
+
+# [1.1.2] - 2025-06-05
+### Fixed
+- Added shebang line to the main script to ensure it runs correctly in different environments.
+
+# [1.1.3] - 2025-06-07
+### Added
+- Added Star Favourite on best choice of sample project.
