@@ -21,3 +21,7 @@ For earlier changes, refer to the project history.
 # [1.1.3] - 2025-06-07
 ### Added
 - Added Star Favourite on best choice of sample project.
+
+# [1.1.4] - 2025-06-10
+### Fixed
+- Various bug fixes
