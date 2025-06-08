@@ -1,4 +1,4 @@
-# Create MC Bedrock
+# Create MC Bedrock CLI
 
 <div align="center">
   <img src="medias/create-bedrock-cli-banner.png" alt="Create MC Bedrock CLI Banner" width="600" />
@@ -15,7 +15,7 @@
 **Tired of manually setting up Minecraft Bedrock workspaces?**  
 With `create-mc-bedrock`, you can bootstrap your next project in seconds, using official Microsoft samples and fresh manifest UUIDs every time.
 
-## ✨ Why Use Create MC Bedrock?
+## ✨ Why Use Create MC Bedrock CLI?
 
 ### ⚡ **Instant Project Setup**
 No more copy-pasting or manual configuration. Select a sample, pick a folder, and your workspace is ready to go—complete with unique manifest UUIDs.
