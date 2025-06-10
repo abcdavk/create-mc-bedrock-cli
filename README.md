@@ -1,19 +1,23 @@
 # Create MC Bedrock CLI
 
 <div align="center">
-   <a href="git://github.com/keyyard/create-mc-bedrock-cli">
-      <img src="https://img.shields.io/github/stars/keyyard/create-mc-bedrock-cli" alt="GitHub Stars" />
-   </a>
+
+[![GitHub Stars](https://img.shields.io/github/stars/keyyard/create-mc-bedrock-cli?style=social)](https://github.com/keyyard/create-mc-bedrock-cli)
+[![Version](https://img.shields.io/badge/version-1.1.3-blue.svg)](https://github.com/keyyard/create-mc-bedrock-cli)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
+
+[![Website](https://img.shields.io/badge/visit%20our%20website-8A2BE2)](https://bedrockcli.keyyard.xyz/)
+
+<br/>
+
+<img src="medias/create-bedrock-cli-banner.png" alt="Create MC Bedrock CLI Banner" width="600" />
+
 </div>
-<div align="center">
-      <a href="https://bedrockcli.keyyard.xyz/"> Visit Our Website</a>
-</div>
-<div align="center">
-  <img src="medias/create-bedrock-cli-banner.png" alt="Create MC Bedrock CLI Banner" width="600" />
 
 **The Fastest Way to Start Minecraft Bedrock Addon Development! 🚀**
 
-[![Version](https://img.shields.io/badge/version-1.1.6-blue.svg)](https://github.com/keyyard/create-mc-bedrock-cli)
+[![Version](https://img.shields.io/badge/version-1.1.7-blue.svg)](https://github.com/keyyard/create-mc-bedrock-cli)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
 
@@ -23,6 +27,16 @@
 
 **Tired of manually setting up Minecraft Bedrock workspaces?**  
 With `create-mc-bedrock`, you can bootstrap your next project in seconds, using official Microsoft samples and fresh manifest UUIDs every time.
+
+## Table of Contents
+- [✨ Why Use Create MC Bedrock CLI?](#-why-use-create-mc-bedrock-cli)
+- [🚀 How It Works](#-how-it-works)
+- [📸 Showcase](#-showcase)
+- [🛠️ Features](#-features)
+- [📦 Requirements](#-requirements)
+- [💡 Pro Tips](#-pro-tips)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ## ✨ Why Use Create MC Bedrock CLI?
 
@@ -107,10 +121,10 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 ---
 
 <div align="center">
-
-**Made with ❤️ for the Minecraft Bedrock development community**  
-[![GitHub Stars](https://img.shields.io/github/stars/keyyard/create-mc-bedrock-cli?style=social)](https://github.com/keyyard/create-mc-bedrock-cli/stargazers)
-
+  **Made with ❤️ for the Minecraft Bedrock dev community**  
+  <br/>
+  <a href="https://github.com/keyyard/create-mc-bedrock-cli/stargazers">
+    ⭐ Star us on GitHub
+  </a>
 </div>
-
 ---
