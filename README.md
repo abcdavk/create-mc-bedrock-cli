@@ -1,13 +1,22 @@
 # Create MC Bedrock CLI
 
 <div align="center">
+   <a href="git://github.com/keyyard/create-mc-bedrock-cli">
+      <img src="https://img.shields.io/github/stars/keyyard/create-mc-bedrock-cli" alt="GitHub Stars" />
+   </a>
+</div>
+<div align="center">
+      <a href="https://bedrockcli.keyyard.xyz/"> Visit Our Website</a>
+</div>
+<div align="center">
   <img src="medias/create-bedrock-cli-banner.png" alt="Create MC Bedrock CLI Banner" width="600" />
 
-  **The Fastest Way to Start Minecraft Bedrock Addon Development! 🚀**
+**The Fastest Way to Start Minecraft Bedrock Addon Development! 🚀**
 
-  [![Version](https://img.shields.io/badge/version-1.1.3-blue.svg)](https://github.com/keyyard/create-mc-bedrock-cli)
-  [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
-  [![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.1.3-blue.svg)](https://github.com/keyyard/create-mc-bedrock-cli)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
+
 </div>
 
 ---
@@ -18,15 +27,19 @@ With `create-mc-bedrock`, you can bootstrap your next project in seconds, using 
 ## ✨ Why Use Create MC Bedrock CLI?
 
 ### ⚡ **Instant Project Setup**
+
 No more copy-pasting or manual configuration. Select a sample, pick a folder, and your workspace is ready to go—complete with unique manifest UUIDs.
 
 ### 🧠 **Focus on Building, Not Boilerplate**
+
 Spend your time creating, not setting up. All the essentials are handled for you, so you can jump straight into development.
 
 ### 🔒 **Always Unique, Always Clean**
+
 Every project is generated with new manifest UUIDs, ensuring no conflicts and a smooth import into Minecraft.
 
 ### 🗂️ **Official Samples, Your Way**
+
 Choose from a curated list of Microsoft’s best scripting samples. Your selected template is cloned directly into your chosen folder—no nested directories, no confusion.
 
 ---
