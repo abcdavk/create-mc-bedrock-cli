@@ -13,7 +13,7 @@
 
 **The Fastest Way to Start Minecraft Bedrock Addon Development! 🚀**
 
-[![Version](https://img.shields.io/badge/version-1.1.3-blue.svg)](https://github.com/keyyard/create-mc-bedrock-cli)
+[![Version](https://img.shields.io/badge/version-1.1.6-blue.svg)](https://github.com/keyyard/create-mc-bedrock-cli)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
 
