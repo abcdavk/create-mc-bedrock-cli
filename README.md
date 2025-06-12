@@ -104,16 +104,23 @@ Choose from a curated list of Microsoft’s best scripting samples. Your selecte
 
 ## 🤝 Contributing
 
-Contributions are welcome!  
-If you have ideas, bug reports, or want to add more samples, open an issue or submit a pull request.
+We’d love your help to make Create MC Bedrock CLI even better!  
+Whether you have ideas, spot a bug, or want to share new samples, your contributions are always welcome.
+
+Want to add a new workspace template?  
+Simply open a pull request to the [Custom MC Scripting Templates](https://github.com/Keyyard/custom-mc-scripting-templates) repository.
+
+Every suggestion, issue, or PR helps the community grow—jump in and let’s build something awesome together!
 
 ---
 
-## 📄 License
+## ⭐ Stargazers Over Time
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
+<div align="center">
+   <a href="https://starchart.cc/Keyyard/create-mc-bedrock-cli">
+      <img src="https://starchart.cc/Keyyard/create-mc-bedrock-cli.svg?variant=adaptive" alt="Stargazers over time" />
+   </a>
+</div>
 
 <div align="center">
   **Made with ❤️ for the Minecraft Bedrock dev community**  
@@ -122,4 +129,5 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
     ⭐ Star us on GitHub
   </a>
 </div>
+
 ---
