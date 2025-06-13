@@ -116,11 +116,13 @@ Every suggestion, issue, or PR helps the community grow—jump in and let’s bu
 
 ## ⭐ Stargazers Over Time
 
-<div align="center">
-   <a href="https://starchart.cc/Keyyard/create-mc-bedrock-cli">
-      <img src="https://starchart.cc/Keyyard/create-mc-bedrock-cli.svg?variant=adaptive" alt="Stargazers over time" />
-   </a>
-</div>
+<a href="https://www.star-history.com/#Keyyard/create-mc-bedrock-cli&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Keyyard/create-mc-bedrock-cli&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Keyyard/create-mc-bedrock-cli&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Keyyard/create-mc-bedrock-cli&type=Date" />
+ </picture>
+</a>
 
 <div align="center">
   **Made with ❤️ for the Minecraft Bedrock dev community**  
