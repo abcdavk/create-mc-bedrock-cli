@@ -3,7 +3,7 @@
 <div align="center">
 
 [![GitHub Stars](https://img.shields.io/github/stars/keyyard/create-mc-bedrock-cli?style=social)](https://github.com/keyyard/create-mc-bedrock-cli)
-[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](https://github.com/keyyard/create-mc-bedrock-cli)
+[![Version](https://img.shields.io/badge/version-1.2.1-blue.svg)](https://github.com/keyyard/create-mc-bedrock-cli)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
 
@@ -32,6 +32,7 @@ With `create-mc-bedrock`, you can bootstrap your next project in seconds, using 
 - [💡 Pro Tips](#-pro-tips)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
+- [🙏 Credits](#-credits)
 
 ## ✨ Why Use Create MC Bedrock CLI?
 
@@ -114,6 +115,13 @@ Every suggestion, issue, or PR helps the community grow—jump in and let’s bu
 
 ---
 
+## 🙏 Credits
+
+- **Beyond64** ([OsmaanGani](https://github.com/OsmaanGani)): Package banner artist
+- **PottedPropagule** ([PottedPropagule](https://github.com/PottedPropagule)): Issue reporter and helpful feedback
+
+---
+
 ## ⭐ Stargazers Over Time
 
 <a href="https://www.star-history.com/#Keyyard/create-mc-bedrock-cli&Date">
@@ -131,5 +139,3 @@ Every suggestion, issue, or PR helps the community grow—jump in and let’s bu
     ⭐ Star us on GitHub
   </a>
 </div>
-
----
