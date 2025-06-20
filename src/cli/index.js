@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 import { displayAsciiArt } from '../utils/logger.js';
 import { fetchSamples, getSamples } from '../services/gitService.js';
-import { promptSource, promptUser } from './commands.js';
+import { promptSource, promptUser, promptCategory, promptTemplate } from './commands.js';
 import { moveSample } from '../services/fileService.js';
 import { updateManifestFiles } from '../services/manifestService.js';
 import { cleanupTempFiles } from '../utils/helpers.js';
 import path from 'path';
+import inquirer from 'inquirer';
 
 async function run() {
   await displayAsciiArt();
@@ -13,20 +14,36 @@ async function run() {
   try {
     await cleanupTempFiles();
     const { source } = await promptSource();
+    await cleanupTempFiles();
     await fetchSamples(source);
-    const samples = await getSamples(source);
 
-    if (samples.length === 0) {
-      console.error('No samples found in the repository.');
-      return;
+    let sample, destination, samplePath;
+    if (source === 'custom') {
+      const category = await promptCategory();
+      sample = await promptTemplate(category);
+      const answers = await inquirer.prompt([
+        {
+          type: 'input',
+          name: 'destination',
+          message: 'Enter the destination folder:',
+          default: './'
+        }
+      ]);
+      destination = answers.destination;
+      samplePath = path.join('./temp-repo-custom', category, sample);
+    } else {
+      const samples = await getSamples(source);
+      if (samples.length === 0) {
+        console.error('No samples found in the repository.');
+        return;
+      }
+      const answers = await promptUser(samples);
+      sample = answers.sample;
+      destination = answers.destination;
+      samplePath = path.join('./temp-repo-microsoft', sample);
     }
 
-    const answers = await promptUser(samples);
-    const { sample, destination } = answers;
-
     const targetPath = path.resolve(destination);
-    const samplePath = path.join(source === 'microsoft' ? './temp-repo-microsoft' : './temp-repo-custom', sample);
-
     await moveSample(samplePath, targetPath);
 
     // Update manifest files after moving the sample

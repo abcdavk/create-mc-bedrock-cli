@@ -1,5 +1,46 @@
 import inquirer from 'inquirer';
-import { getSourceOptions } from '../services/gitService.js';
+import { getSourceOptions, getCustomCategories, getCustomTemplates } from '../services/gitService.js';
+// Prompt for category if custom source is selected
+export async function promptCategory() {
+  let categories = await getCustomCategories();
+  // Filter out categories with no templates
+  const filteredCategories = [];
+  for (const cat of categories) {
+    const templates = await getCustomTemplates(cat.value);
+    if (templates && templates.length > 0) {
+      filteredCategories.push(cat);
+    }
+  }
+  if (!filteredCategories.length) {
+    throw new Error('No categories with templates found in custom templates.');
+  }
+  const { category } = await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'category',
+      message: 'Select a template category:',
+      choices: filteredCategories
+    }
+  ]);
+  return category;
+}
+
+// Prompt for template within a category
+export async function promptTemplate(category) {
+  const templates = await getCustomTemplates(category);
+  if (!templates.length) {
+    throw new Error('No templates found in this category.');
+  }
+  const { template } = await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'template',
+      message: 'Select a template:',
+      choices: templates
+    }
+  ]);
+  return template;
+}
 
 export async function promptSource() {
   return inquirer.prompt([
