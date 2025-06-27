@@ -7,6 +7,7 @@ import { updateManifestFiles } from '../services/manifestService.js';
 import { cleanupTempFiles } from '../utils/helpers.js';
 import path from 'path';
 import inquirer from 'inquirer';
+import { version } from 'os';
 
 async function run() {
   await displayAsciiArt();
@@ -17,7 +18,7 @@ async function run() {
     await cleanupTempFiles();
     await fetchSamples(source);
 
-    let sample, destination, samplePath;
+    let sample, destination, samplePath, addonOption;
     if (source === 'custom') {
       const category = await promptCategory();
       sample = await promptTemplate(category);
@@ -28,8 +29,25 @@ async function run() {
           name: 'destination',
           message: 'Enter the destination folder:',
           default: './'
+        },
+        {
+          type: 'input',
+          name: 'name',
+          message: 'Enter the addon name:',
+          default: 'name'
+        },
+        {
+          type: 'input',
+          name: 'description',
+          message: 'Enter the addon description:',
+          default: 'description'
         }
       ]);
+      console.warn(JSON.stringify(answers.name));
+      addonOption = {
+        name: answers.name,
+        description: answers.description
+      }
       destination = answers.destination;
       samplePath = path.join('./temp-repo-custom', category, sample);
     } else {
@@ -49,7 +67,7 @@ async function run() {
 
     // Update manifest files after moving the sample
     const relativePath = path.relative(process.cwd(), targetPath);
-    await updateManifestFiles(relativePath, destination);
+    await updateManifestFiles(relativePath, destination, addonOption);
   } catch (error) {
     console.error(error.message);
   } finally {

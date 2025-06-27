@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 
-export async function updateManifestFiles(destination, userInputName) {
+export async function updateManifestFiles(destination, userInputPath, addonOption) {
   // Find manifest paths dynamically
   const manifestPaths = [];
   
@@ -65,8 +65,12 @@ export async function updateManifestFiles(destination, userInputName) {
 
       // Update name and description based on user input and type (RP/BP)
       const type = isBehaviorPack ? 'BP' : 'RP';
-      manifestContent.header.name = `${userInputName} ${type}`;
-      manifestContent.header.description = `Generated from npx create-mc-bedrock`;
+
+      const addonName = addonOption.name === "name" ? userInputPath : addonOption.name;
+      const addonDesc = addonOption.description === "description" ? `Generated from npx create-mc-bedrock` : addonOption.description;
+
+      manifestContent.header.name = `${addonName} ${type}`;
+      manifestContent.header.description = addonDesc;
 
       // Write updated manifest back to file
       await fs.writeFile(manifestPath, JSON.stringify(manifestContent, null, 2), 'utf-8');
