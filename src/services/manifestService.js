@@ -45,11 +45,14 @@ export async function updateManifestFiles(destination, userInputPath, addonOptio
       // Update header UUID
       manifestContent.header.uuid = isBehaviorPack ? bpHeaderUuid : rpHeaderUuid;
 
+      const addonName = addonOption.name === "name" ? userInputPath : addonOption.name;
+      const addonDesc = addonOption.description === "description" ? `Generated from npx create-mc-bedrock` : addonOption.description;
+
       // Update module UUIDs
       if (manifestContent.modules) {
         manifestContent.modules.forEach(module => {
           module.uuid = uuidv4();
-          module.description = `Generated from npx create-mc-bedrock`;
+          module.description = addonDesc;
         });
       }
 
@@ -65,9 +68,6 @@ export async function updateManifestFiles(destination, userInputPath, addonOptio
 
       // Update name and description based on user input and type (RP/BP)
       const type = isBehaviorPack ? 'BP' : 'RP';
-
-      const addonName = addonOption.name === "name" ? userInputPath : addonOption.name;
-      const addonDesc = addonOption.description === "description" ? `Generated from npx create-mc-bedrock` : addonOption.description;
 
       manifestContent.header.name = `${addonName} ${type}`;
       manifestContent.header.description = addonDesc;
