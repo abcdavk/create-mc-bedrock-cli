@@ -43,7 +43,6 @@ async function run() {
           default: 'description'
         }
       ]);
-      console.warn(JSON.stringify(answers.name));
       addonOption = {
         name: answers.name,
         description: answers.description
