@@ -21,6 +21,7 @@ async function run() {
     if (source === 'custom') {
       const category = await promptCategory();
       sample = await promptTemplate(category);
+      // inquirer is used to prompt for the destination folder
       const answers = await inquirer.prompt([
         {
           type: 'input',
